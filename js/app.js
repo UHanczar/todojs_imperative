@@ -97,4 +97,9 @@ const addTodoItem = (event) => {
   addInput.value = '';
 };
 
-todoForm.addEventListener('submit', addTodoItem);
+const main = () => {
+  todoForm.addEventListener('submit', addTodoItem);
+  todoItems.forEach(item => bindEvents(item));
+};
+
+main();
